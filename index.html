@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Gauntlet</title>
+<meta name="description" content="All your daily puzzles in one place. Play, solve, check them off.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo">◆</span>
+    <div>
+      <h1>Daily Gauntlet</h1>
+      <p class="date" id="date"></p>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><span id="solvedCount">0</span><small>solved today</small></div>
+    <div class="stat"><span id="streak">0</span><small>day streak</small></div>
+    <button class="theme" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<div class="progress"><div class="bar" id="bar"></div></div>
+
+<nav class="controls">
+  <input id="search" type="search" placeholder="Search puzzles…" autocomplete="off">
+  <div class="chips" id="chips"></div>
+  <label class="toggle"><input type="checkbox" id="hideSolved"> Hide solved</label>
+  <label class="toggle"><input type="checkbox" id="favOnly"> ★ Only</label>
+</nav>
+
+<main class="grid" id="grid"></main>
+
+<div class="toast" id="toast" hidden>
+  <span id="toastText"></span>
+  <button id="toastYes">Solved ✓</button>
+  <button id="toastNo" class="ghost">Not yet</button>
+</div>
+
+<footer>
+  <p>Click a card to play. Come back and mark it solved. Progress resets at midnight and lives only in your browser.</p>
+  <p>All games belong to their creators. Daily Gauntlet just links to them.</p>
+</footer>
+
+<script src="games.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
